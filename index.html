@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/animation.js"></script>
+    <script src="js/script.js"></script>
+    <title>恋愛診断</title>
+  </head>
+
+  <body>
+    <div class="choose_box">
+      <!-- 質問一覧 -->
+       <div class="app-theme">
+        <h1>あなたのタイプ＆好きな人の頭文字が分かる恋愛診断</h1> 
+      </div>
+      <!-- 質問1 -->
+      <div id="q_01" class="fit">
+        <h2>質問1: あなたの誕生日は何月？？</h2> </br>
+        <ul>
+          <li>
+            <a class="btn" href="#q_02" data-value="3">1月　4月　8月　11月</a>
+          </li>
+          <li>
+            <a class="btn" href="#q_02" data-value="2">3月　6月　7月　12月</a>
+          </li>
+          <li>
+            <a class="btn" href="#q_02" data-value="1">2月　5月　9月　10月</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 質問2 -->
+      <div id="q_02" style="display: none">
+        <h2>質問2:　好きなジャンルは</h2>
+        <ul>
+          <li><a class="btn" href="#q_03" data-value="3">ドラマ</a></li>
+          <li><a class="btn" href="#q_03" data-value="2">映画</a></li>
+          <li><a class="btn" href="#q_03" data-value="1">アニメ</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問3 -->
+      <div id="q_03" style="display: none">
+        <h2>質問3:　旅行にいくならどこ？</h2>
+        <ul>
+          <li><a class="btn" href="#q_04" data-value="3">温泉</a></li>
+          <li><a class="btn" href="#q_04" data-value="2">海外</a></li>
+          <li><a class="btn" href="#q_04" data-value="1">リゾート地</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問4 -->
+      <div id="q_04" style="display: none">
+        <h2>質問4:　一番嫌な事はなに？</h2>
+        <ul>
+          <li><a class="btn" href="#q_05" data-value="3">怒られる</a></li>
+          <li>
+            <a class="btn" href="#q_05" data-value="2">一人ぼっちになる</a>
+          </li>
+          <li><a class="btn" href="#q_05" data-value="1">退屈なこと</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問5 -->
+      <div id="q_05" style="display: none">
+        <h2>質問5:　あなたの性格は？</h2>
+        <ul>
+          <li><a class="btn" href="#q_06" data-value="3">変わっている</a></li>
+          <li><a class="btn" href="#q_06" data-value="2">明るい</a></li>
+          <li><a class="btn" href="#q_06" data-value="1">クール/静か</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問6 -->
+      <div id="q_06" style="display: none">
+        <h2>質問6:　自分を動物に例えると？</h2>
+        <ul>
+          <li><a class="btn" href="#q_07" data-value="3">犬</a></li>
+          <li><a class="btn" href="#q_07" data-value="2">さる</a></li>
+          <li><a class="btn" href="#q_07" data-value="1">ライオン</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問 7-->
+      <div id="q_07" style="display: none">
+        <h2>質問7:　大切にしている価値観は？</h2>
+        <ul>
+          <li><a class="btn" href="#q_08" data-value="3">嘘をつかない</a></li>
+          <li><a class="btn" href="#q_08" data-value="2">人を大切にする</a></li>
+          <li><a class="btn" href="#q_08" data-value="1">楽しく生きる</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問8 -->
+      <div id="q_08" style="display: none">
+        <h2>質問8:　運がいいほうだと思う？</h2>
+        <ul>
+          <li><a class="btn" href="#q_09" data-value="3">かなり</a></li>
+          <li><a class="btn" href="#q_09" data-value="2">そこそこ</a></li>
+          <li><a class="btn" href="#q_09" data-value="1">ちょっと</a></li>
+        </ul>
+      </div>
+
+      <!-- 質問9 -->
+      <div id="q_09" style="display: none">
+        <h2>質問9:　好きな音楽は？</h2>
+        <ul>
+          <li><a class="btn end" data-value="3">まったりなR&B</a></li>
+          <li><a class="btn end" data-value="2">爽やかなPOPS</a></li>
+          <li><a class="btn end" data-value="1">ノリノリのRock</a></li>
+        </ul>
+      </div>
+
+      <!-- ここから以下回答 -->
+      <!-- 回答の答え1 -->
+      <div id="answer_01" class="result" style="display: none">
+        <div class="result_theme">
+          <p>診断結果</p>
+        </div>
+        <div class="result_type0">
+          <h4>あっさりタイプ</h4>
+          <img src='img/a01.png' style="display: block; margin: auto;">
+        </div>
+        <div class="result_discriptiom1">
+          <p>
+            あなたはサッパリとした恋愛を好むタイプです。
+          </p>
+          <p>
+            人間関係においても面倒だと思うことを嫌うあっさりした性格の持ち主です。<br>
+            そのため、トラブルが起こった場合でも引きずる事はあまりせず周囲からも心の広い人と思われているでしょう。<br>
+            また、好き嫌いがはっきりしているので、関わりたい人と関わりたくない人を自分でしっかりと決めるタイプでもあります。<br>
+            心の優しいあなたは、たとえ嫌いな相手であっても意地悪をするわけでもありませんが、<br>
+            好きな人に対しても好意的であるという事を示して伝えられていないので、<br>
+            好きな人には少しずつでも伝えていっても良いのではないでしょうか。<br>
+            男女問わず誰からも必要とされている存在なので、勇気を持って相手に伝えてみましょう！<br>
+          </p>
+        </div>
+        <div class="return-btn">
+          <a class="return" href="index.html">もどる</a>
+        </div>
+      </div>
+
+      <!-- 回答の答え2 -->
+      <div id="answer_02" class="result" style="display: none">
+        <div class="result_theme">
+          <p>診断結果</p>
+        </div>
+        <div class="result_type1">
+          <h4>尽くすタイプ</h4>
+          <img src='img/a02.png' style="display: block; margin: auto;">
+        </div>
+        <div class="result_discriptiom２">
+          <p>
+            あなたは好きな人になら何でもしてあげたいと思う尽くすタイプの人のようです。
+          </p>
+          <p>
+            好きな人や恋人への愛情が深く自分のことを後回しにしてでも相手に与える事ができる人であり、<br>
+            「自分だけが尽くしていて嫌だ」とネガティブに感じる事はなく、<br>
+            相手に与えることに喜びを感じることのできる人ではないでしょうか？<br>
+            ただ、たまには自分のことも見て欲しい・構って欲しいと思う一面も持っているので、<br>
+            付き合う相手を選ぶ際は慎重になったほうがいいかもしれません。<br>
+            あなたの尽くす性格を見越して好き放題言ってくる人もおり、<br>
+            それでも好きになったら受け入れてしまう優しい性格なので、<br>
+            好きになる前に相手をしっかり見極める事が必要になるでしょう。<br>
+          </p>
+        </div>
+        <div class="return-btn">
+          <a class="return" href="index.html">もどる</a>
+        </div>
+      </div>
+
+      <!-- 回答の答え3 -->
+      <div id="answer_03" class="result" style="display: none">
+        <div class="result_theme">
+          <p>診断結果</p>
+        </div>
+        <div class="result_type2">
+          <h4>安定タイプ</h4>
+          <img src='img/a03.png' style="display: block; margin: auto;">
+        </div>
+        <div class="result_discriptiom3">
+          <p>あなたは恋愛に安定を求めるタイプです。</p>
+          <p>
+            好きな人や恋人への愛情が深く自分のことを後回しにしてでも相手に与える事ができる人であり、<br>
+            「自分だけが尽くしていて嫌だ」とネガティブに感じる事はなく、<br>
+            相手に与えることに喜びを感じることのできる人ではないでしょうか？<br>
+            ただ、たまには自分のことも見て欲しい・構って欲しいと思う一面も持っているので、<br>
+            付き合う相手を選ぶ際は慎重になったほうがいいかもしれません。<br>
+            あなたの尽くす性格を見越して好き放題言ってくる人もおり、<br>
+            それでも好きになったら受け入れてしまう優しい性格なので、<br>
+            好きになる前に相手をしっかり見極める事が必要になるでしょう。<br>
+          </p>
+        </div>
+        <div class="return-btn">
+          <a class="return" href="index.html">もどる</a>
+        </div>
+      </div>
+      <!-- 回答の答え4 -->
+      <div id="answer_04" class="result" style="display: none">
+        <div class="result_theme">
+          <p>診断結果</p>
+        </div>
+        <div class="result_type3">
+          <h4>ピュアなタイプ</h4>
+          <img src='img/a04.png' style="display: block; margin: auto;">
+        </div>
+        <div class="result_discriptiom3">
+          <p>あなたはピュアな心を持つタイプの人です。</p>
+          <p>
+            出会ったばかりの相手からも「昔から一緒にいる感じがする」と思われるような不思議な魅力を持った人で、<br>
+            相手に対しても安らぎや癒しを与えられていることでしょう。<br>
+            恋愛に進展するまではスローペースではありますが、一つひとつの恋愛を大切にしたいという気持ちの表れで<br>
+            結婚しても幸せな家庭を築く事ができるタイプのはずです。<br>
+          </p>
+          <h3>I	 H  K Z	O </h3>
+        </div>
+        <div class="return-btn">
+          <a class="return" href="index.html">もどる</a>
+        </div>
+      </div>
+
+      <!-- 回答の答え5 -->
+      <div id="answer_05" class="result" style="display: none">
+        <div class="result_theme">
+          <p>診断結果</p>
+               </div>
+        <div class="result_type4">
+          <h4>運命を信じるタイプ</h4>
+          <img src='img/a05.png' style="display: block; margin: auto;">
+        </div>
+        <div class="result_discriptiom3">
+          <p>あなたは運命的な出会いドラマティックな展開を望むタイプの人です。</p>
+          <p>
+            ドラマの世界みたいに、運命の人が訪れて、一生忘れられないような恋愛を楽しみたい・・・<br>
+            そんな思いは誰もが抱いているのではないでしょうか？<br>
+            あなたはその嗅覚に優れていて特徴を知り、<br>
+            運命の相手を見つけることができれば、<br>
+            ドラマの世界のような大恋愛をすること実行できる想像力と行動力をもちあわせています。<br>
+          </p>
+        </div>
+        <div class="return-btn">
+          <a class="return" href="index.html">もどる</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
